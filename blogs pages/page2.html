@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+
+
+    <title>Comment toxicity Prediction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/63654ca40b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="page.css">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: white;
+            background-color: #474e5d;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader" id="preloader">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container text-center">
+            <div class="navbar-header" data-aos="slide-left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ashish Kumar</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" data-aos="slide-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../resume.html">About Me</a></li>
+                    <li><a href="../blog.html">My Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="go-back" data-aos="slide-left">
+        <a href="../blog.html" class="btn">
+            <- Go back</a>
+    </div>
+    <div class="image-container" data-aos="flip-left">
+        <img src="../images/coment_toxicity_1.jpg" alt="">
+    </div>
+
+    <div class="main-container">
+        <div class="main-paragraph" data-aos="zoom-in">
+            <h3 style="font-weight: bold;
+            padding: 1%;
+            font-size: 3.5rem;">Comment toxicity Prediction using Deep learning</h3>
+            <br>
+            <p>
+                This is my project on comment toxicity prediction using Deep learning and TensorFlow. This is one of my
+                favorite project because it includes neural networks and the Tensorflow
+                framework moreover, I got this challenge from Kaggle. I have built many projects related to healthcare,
+                and computer vision and so on but this project surprised me
+                because comments are everywhere from websites to social media.
+            </p>
+            <br>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">
+                Background on the problem statement
+            </p>
+            <p>
+                The problem statement originates from massive online forums where people post comments about the
+                product.
+                Comments are sometimes Abusive, insulting or even hate based,
+                so it has become the responsibility of the hosting organizations to ensure that the conversations are
+                positive but not negative type.
+                The need to identify and remove the negativity from the comments is to eliminate disrespectful, or
+                unreasonable content that is likely to make people leave a discussion. Many forms of toxicity are
+                obvious, including racism, hate speech, harassment, profane language, and threats
+            </p>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">
+                Approach to the problem statement
+            </p>
+            <p>
+                Dataset is publicly on Kaggle over <a
+                    href="https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge">here</a>.
+                The dataset has no
+                null values and it is perfectly available for training the Deep neural network.
+            </p>
+            <p style="text-align: left;">
+                <span style="font-size: 3rem;">•</span> Loading the data <br>
+                The project was completely executed in the google collaboratory. The first step is to load the Dataset
+                in the google colab which is available from the link in the above section
+                we can make use of open-source libraries like pandas to convert the dataset into the form of a data
+                frame which is highly recommended for any machine learning project.
+            </p>
+            <br>
+            <p style="text-align: left;">
+                <span style="font-size: 3rem;">•</span> Preprocessing comments<br>
+                Before providing the inputs to the Deep learning model we have to preprocess the comments present in the
+                data frame. we can convert the comments into tokens where every word has a unique identifier
+                this process is called tokenizer. In simple words, tokenization is the process of tokenizing or
+                splitting a string or text into a list of tokens. After tokenization, we convert them into embeddings
+                where it represents certain attributes about a token or a text.
+            </p>
+            <br>
+            <p style="text-align: left;">
+                <span style="font-size: 3rem;">•</span> Creating a Deep Natural Language Processing model<br>
+            </p>
+            <div class="image-container" data-aos="flip-left" style="padding:5rem;">
+                <img src="../images/model_pic.jpg" alt="">
+            </div>
+            <p style="text-align: left;">
+                The above picture is a graphical representation of the deep learning model used in the project. it
+                consists of several layers including Embedding layers, Bidirectional
+                LSTM(long short-term memory) layers and Dense layers.
+                An LSTM layer above provides a sequence output. Specifically, one output per input time step, rather
+                than one output time step for all input time steps.
+            </p>
+            <br>
+            <p style="text-align: left;">
+                <span style="font-size: 3rem;">•</span> Evaluating the model<br>
+                The model takes a lot of time to train because it has around 6 million parameters to train. It was
+                trained for 5 epochs and it is evaluated on the dev set.
+                it has got Precision:0.900296151638031, Recall:0.7646729946136475, Accuracy:0.5185556411743164. In the
+                future I will improve the model by collecting more data and
+                training for longer duration.
+            </p>
+            <br>
+            <p style="text-align: left;">
+                <span style="font-size: 3rem;">•</span> Conclusion<br>
+                Hence this was the breakthrough of my project on comment toxicity prediction using Deep learning and
+                Tensorflow.
+            </p>
+            <br>
+
+
+
+        </div>
+    </div>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="col item social">
+                <a href="https://twitter.com/AshishKumarML"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC2E52Why2dcJiRIFuFyykRQ">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/ashish_martin_/"><i class="fa fa-instagram"></i></a>
+            </div>
+    </div>
+
+
+    </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+        AOS.init(
+            {
+                duration: 500
+            }
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <title>Blogs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/63654ca40b.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader" id="preloader">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container text-center">
+            <div class="navbar-header" data-aos="slide-left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ashish Kumar</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" data-aos="slide-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">About Me</a></li>
+                    <li><a href="blog.html">My Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="blog-section-2 white" data-aos="fade-out">
+        <div class="blog-section-header">
+            <h3 class="main-blog-header" id="margin" data-aos="slide-left">My Blogs</h3>
+        </div>
+        <div class="blog-section-header">
+            <h2 class="Sub-blog-header-2" style="color: white;" data-aos="slide-left">Machine learning</h2>
+        </div>
+        <div class="blog-container">
+            <div class="blog-box">
+                <div class="blog-image" data-aos="flip-right">
+                    <img src="images/Gradient_descent.jpeg" alt="Blog" class="blog-image shadow">
+                </div>
+                <div class="blog-info" data-aos="flip-left">
+                    <h1 style="text-align: centre;">Brief overview of Gradient descent</h1>
+                </div>
+                <div class="share-button">
+                </div>
+                <div class="date-created">
+                    <div style="padding: 3%;">
+                        <p>Date Created : 17 october 2022</p>
+                    </div>
+
+                    <div>
+                        <a href="blogs pages\page1.html" class="btn" style="font-size: 20px;">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-image" data-aos="flip-left">
+                    <img src="images/coment_toxicity.jpg" alt="Blog" class="blog-image shadow">
+                </div>
+                <div class="blog-info" data-aos="flip-left">
+                    <h1>Comment toxicity Prediction using Deep learning</h1>
+                </div>
+                <div class="share-button">
+                </div>
+                <div class="date-created">
+                    <div style="padding: 3%;">
+                        <p>Date created : 20 july 2022</p>
+                    </div>
+
+                    <div>
+                        <a href="blogs pages/page2.html" class="btn" style="font-size: 20px;">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-dark">
+        <footer>
+            <div class="col item social">
+                <a href="https://twitter.com/AshishKumarML"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC2E52Why2dcJiRIFuFyykRQ">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/ashish_martin_/"><i class="fa fa-instagram"></i></a>
+            </div>
+    </div>
+
+    </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+        AOS.init(
+            {
+                duration: 500
+            }
+        );
+    </script>
+</body>
+
+</html>
+
+
+<!-- <div class="blog-info" data-aos="flip-right">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, sapiente beatae asperiores
+    nesciunt
+    iusto nulla. Cum officiis reiciendis rem iusto praesentium blanditiis ipsum illo, dignissimos
+    saepe,
+    cumque, unde quam mollitia!
+    Sed expedita esse autem molestiae! Sit nemo quam esse ea ut natus placeat reprehenderit labore
+    hic
+    laborum, doloremque reiciendis distinctio architecto quos autem. Officiis quia incidunt eligendi
+    nihil magni harum.
+    Distinctio minima laborum, debitis beatae sequi eveniet qui. Tempora officiis sunt corrupti quos
+    a
+    mollitia qui dicta architecto, laudantium aliquid, quam quia recusandae officia distinctio?
+    Saepe
+    inventore architecto animi corporis.
+</div> -->

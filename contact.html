@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/63654ca40b.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+            background: #15b495;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader" id="preloader">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container text-center">
+            <div class="navbar-header" data-aos="slide-left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ashish kumar</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" data-aos="slide-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">About Me</a></li>
+                    <li><a href="blog.html">My Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="contact-container" data-aos="zoom-in">
+            <div class="header centre" data-aos="slide-down">
+                <h3 style="color: #575454;
+                padding-top: 2rem;
+                padding-bottom: 1.5rem;
+                font-size: 3rem;">Drop a message</h3>
+                <p style="color: rgb(105, 101, 101);
+                font-size: 2rem;">Got a question?I'd love to hear from you. Send me a message and I will respond as
+                    soon as
+                    possible
+                </p>
+            </div>
+            <div class="main-contact">
+                <div class="contact-me" data-aos="slide-right">
+                    <i class="fa-brands fa-linkedin" style="padding-top: 1%;"></i><br>
+                    <a
+                        href="https://www.linkedin.com/in/ashish-kumar-mamidi-81489a20a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BAZyHsZ9qSdicvhpg3z4pjA%3D%3D">
+                        <p style="padding-top: 1rem;">Ashish Kumar Mamidi</p>
+                    </a><br>
+                    <i class="fa-light fa-at"></i>
+                    <div>
+                        <p style="padding-top: 1rem;" class="guarav_font">kumarashish96690@gmail.com</p><br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="col item social">
+                <a href="https://twitter.com/AshishKumarML"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC2E52Why2dcJiRIFuFyykRQ">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/ashish_martin_/"><i class="fa fa-instagram"></i></a>
+            </div>
+    </div>
+
+    </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+        AOS.init(
+            {
+                duration: 500
+            }
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.main-resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 3%;
+
+}
+
+.content {
+    width: auto;
+    height: auto;
+    margin-left: 5%;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+@media screen and (max-width:817px) {
+    .content {
+        margin-left: 0%;
+    }
+
+    .Image {
+        padding-bottom: 5%;
+    }
+}
+
+.resume-main {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.career::first-letter {
+    font-size: 10rem;
+}
+
+.qualification {
+    padding: 3%;
+}
+
+.university {
+    padding: 3%;
+}
+
+.scrollable {
+    height: 250px;
+    overflow: scroll;
+}
+
+@media screen and (max-width:460px) {
+    img {
+        width: 250px;
+    }
+}
+
+p {
+    margin: inherit;
+    margin-bottom: 40px;
+}
+
+.subject div {
+    margin: 20px;
+}
+
+h3 {
+    font-weight: bold;
+}

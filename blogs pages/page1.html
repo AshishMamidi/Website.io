@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+
+
+    <title>Brief Introduction to Gradient Descent</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/63654ca40b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="page.css">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: white;
+            background-color: #474e5d;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #474e5d;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader" id="preloader">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container text-center">
+            <div class="navbar-header" data-aos="slide-left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ashish Kumar</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" data-aos="slide-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../resume.html">About Me</a></li>
+                    <li><a href="../blog.html">My Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="go-back" data-aos="slide-left">
+        <a href="../blog.html" class="btn">
+            <- Go back</a>
+    </div>
+    <div class="image-container" data-aos="flip-left">
+        <img src="../images/Gradient_descent.jpeg" alt="">
+    </div>
+
+    <div class="main-container">
+        <div class="main-paragraph" data-aos="zoom-in">
+            <h3 style="font-weight: bold;
+            padding: 0.5%;
+            font-size: 3.5rem;">Brief Introduction to Gradient Descent.</h3>
+            <p>
+                This blog gives a brief overview of the Gradient descent optimization algorithm which is highly used in
+                machine learning and deep learning. Gradient descent is used by
+                many machine learning practioner's including myself.
+                <br><br>
+                Everyday we use optimization techniques and algorithms with or without knowledge. For example for
+                getting a
+                shorter path between two paths we prefer shorter path rather
+                the longest path which takes more time. Optimization is at the heart of most of the statistical and
+                Machine
+                Learning techniques which are widely used in data science.
+                for example, you may use a gradient descent algorithm to optimize the parameters used in the machine
+                learning model which gives accurate results.
+                <br>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">
+                What is Gradient Descent in Machine Learning?
+            </p>
+            <p>
+                Gradient Descent is an iterative process that finds the minima of a function. Gradient descent is an
+                optimization algorithm mainly used to find the minimum of a function. In machine learning, gradient
+                descent is used to update parameters in a model. Parameters can vary according to the algorithms, such
+                as coefficients in Linear Regression and weights in Neural Networks.
+                <br>
+                Let’s take an example of a Simple Linear regression problem where our aim is to predict the dependent
+                variable(y) when only one independent variable is given. for the above linear regression model, the
+                equation of the line would be as follows.
+                <br>
+                y = m x + c
+                <br>
+                Our ultimate goal of the optimization algorithm is to minimize the loss function. Let's take MSE(mean
+                sqaured error) loss function which actually computes the loss given by the current parameters of the
+                model.
+            </p>
+            <p style="text-align: left;">
+                In the above equation,
+                <br>
+                <span style="font-size: 3rem;">•</span> y is the dependent variable
+                <br>
+                <span style="font-size: 3rem;">•</span> x is the independent variable
+                <br>
+                <span style="font-size: 3rem;">•</span> m is the slope of the line
+                <br>
+                <span style="font-size: 3rem;">•</span> c is the intercept on the y-axis by the line
+                <br>
+                Our ultimate goal of the optimization algorithm is to minimize the loss function. Let's take MSE(mean
+                sqaured error) loss function which actually computes the loss given by the current parameters of the
+                model.
+            </p>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">
+                Loss Function
+            </p>
+            <p style="text-align: left;">
+
+                Here we are required to optimize the value of ‘m’ and ‘c’ in order to minimize the Loss function. as
+                y_predicted is the output given by the Linear Regression Equation, therefore Loss at any given point can
+                be given by
+                In order to find out the negative of the slope, we proceed by finding the partial derivatives with
+                respect to both ‘m’ and ‘c’
+                partial derivatives w.r.t m and c
+                When 2 or more than 2 partial derivatives are done on the same equation w.r.t to 2 or more than 2
+                different variables, it is known as Gradient.
+                After performing partial derivatives w.r.t to ‘m’ and ‘c’ we obtain 2 equations as given above; when
+                some value of ‘m’ and ‘c’ is given and is summed across all the data points, we obtain the negative side
+                of the slope.
+                The next step is to assume a Learning Rate, which is generally denoted by ‘α’ (alpha). In most cases,
+                the Learning Rate is set very close to 0 e.g., 0.001 or 0.005.
+                A small learning rate will result in too many steps by the gradient descent algorithm and if a large
+                value of ‘α’ is selected, it may result in the model to never converging at the minima.
+                Next is to determine Step Size based on our Learning Rate. Step Size can be defined as
+                finding the next points using the learning rate
+                This will give us 2 points which will represent the updated value of ‘m’ and ‘c’.
+                We Iterate over the steps of finding the negative of the slope and then update the value of ‘m’ and ‘c’
+                until we reach or converge on our minima.
+            </p>
+            <div class="image-container" data-aos="flip-left">
+                <img src="../images/gradient_formula.png" alt="">
+            </div>
+            <br>
+            <div class="image-container" data-aos="flip-left" style="padding: 2%;">
+                <img src="../images/types_of_gradient_descent.png" alt="">
+            </div>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">
+                Types of gradient descent
+            </p>
+            <p style="text-align: left;">
+                1) Batch gradient descent
+                <br>
+                In this type of gradient descent, all the training examples are processed for each iteration of gradient
+                descent. It gets computationally expensive if the number of training examples is large. This is when
+                batch gradient descent is not preferred. Rather a stochastic gradient descent or mini-batch gradient
+                descent is used.
+            </p>
+            <br>
+            <p style="text-align: left;">
+                2) Stochastic gradient descent
+                <br>
+                The word stochastic is related to a system or process linked with a random probability. Therefore, in
+                Stochastic Gradient Descent (SGD), samples are selected at random for each iteration instead of
+                selecting the entire data set. When the number of training examples is too large, it becomes
+                computationally expensive to use batch gradient descent. However, Stochastic Gradient Descent uses only
+                a single sample, i.e., a batch size of one, to perform each iteration. The sample is randomly shuffled
+                and selected for performing the iteration. The parameters are updated even after one iteration, where
+                only one has been processed. Thus, it gets faster than batch gradient descent.
+            </p>
+            <br>
+            <p style="text-align: left;">
+                3) Mini-batch gradient descent
+                <br>
+                This type of gradient descent is faster than both batch gradient descent and stochastic gradient
+                descent. Even if the number of training examples is large, it processes it in batches in one go. Also,
+                the number of iterations is lesser despite working with larger training samples.
+            </p>
+            <br>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">Challenges in
+                Executing Gradient Descent
+            </p>
+            <p style="text-align: left;">
+                There are many cases where gradient descent fails to perform well. There are mainly three reasons why
+                this would happen:
+                <br>
+                <span style="font-size: 3rem;">•</span> Data challenges
+                <br>
+                <span style="font-size: 3rem;">•</span> Gradient challenges
+                <br>
+                <span style="font-size: 3rem;">•</span> Implementation challenges
+                <br>
+            </p>
+            <p style="font-weight: bold; text-align: left; padding-left: 0.5rem;font-size: 3rem;">Conclusion
+            </p>
+            <p style="text-align: left;">
+                This brings us to the end of this article, where we have learned about What is Gradient Descent in
+                machine learning and how it works. Its various types of algorithms, challenges we face with gradient
+                descent
+
+            </p>
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="col item social">
+                <a href="https://twitter.com/AshishKumarML"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UC2E52Why2dcJiRIFuFyykRQ">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/ashish_martin_/"><i class="fa fa-instagram"></i></a>
+            </div>
+    </div>
+
+
+    </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+        AOS.init(
+            {
+                duration: 500
+            }
+        );
+    </script>
+</body>
+
+</html>
+
+
+<!-- <div class="blog-info" data-aos="flip-right">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, sapiente beatae asperiores
+    nesciunt
+    iusto nulla. Cum officiis reiciendis rem iusto praesentium blanditiis ipsum illo, dignissimos
+    saepe,
+    cumque, unde quam mollitia!
+    Sed expedita esse autem molestiae! Sit nemo quam esse ea ut natus placeat reprehenderit labore
+    hic
+    laborum, doloremque reiciendis distinctio architecto quos autem. Officiis quia incidunt eligendi
+    nihil magni harum.
+    Distinctio minima laborum, debitis beatae sequi eveniet qui. Tempora officiis sunt corrupti quos
+    a
+    mollitia qui dicta architecto, laudantium aliquid, quam quia recusandae officia distinctio?
+    Saepe
+    inventore architecto animi corporis.
+</div> -->

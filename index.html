@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Welcome</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/63654ca40b.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .margin {
+      margin-bottom: 45px;
+    }
+
+    .bg-1 {
+      background-color: #1abc9c;
+      /* Green */
+      color: #ffffff;
+    }
+
+    .bg-2 {
+      background-color: #474e5d;
+      /* Dark Blue */
+      color: #ffffff;
+    }
+
+    .bg-3 {
+      background-color: #ffffff;
+      /* White */
+      color: #555555;
+    }
+
+    .bg-4 {
+      background-color: #2f2f2f;
+      /* Black Gray */
+      color: #fff;
+    }
+
+    .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+    }
+
+    .navbar-nav li a:hover {
+      color: #1abc9c !important;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="loader" id="preloader">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container text-center">
+      <div class="navbar-header" data-aos="slide-left">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ashish Kumar</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar" data-aos="slide-right">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">About Me</a></li>
+          <li><a href="blog.html">My Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- First Container -->
+  <div class="container-fluid bg-1 text-center" id="main" data-aos="flip-left">
+    <div class="demo-class" data-aos="slide-left"><img src="images\mine.jpg" class="img-Responsive img-Circle demo"
+        alt="Bird" width="350" height="350"></div>
+    <div class="intro" data-aos="slide-right">
+      <h3 id="margin">Hello!</h3>
+      <h2 id="margin">I'm Ashish Kumar</h2>
+    </div>
+
+  </div>
+
+  <!-- Second Container -->
+
+  <div class="container-fluid bg-2 text-center" data-aos="zoom-out" data-aos-offset="300">
+    <h3 class="margin">Portfolio</h3>
+    <p class="grid-para">Enthusiastic and passionate learner seeking creative lessons and engaging real-life
+      examples to apply critical-thinking, problem solving, collaboration skills and applications to everyday life
+      in real-life scenerios.</p>
+    <p class="grid-para">
+      I am currently graduating St. Peter's Engineering College, Hyderabad, Telangana, India. This is my Third year
+      in this
+      institute as a student!</p>
+    <!-- <a href="#" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a> -->
+  </div>
+  </section>
+  <!-- Footer -->
+  <!-- <footer class="container-fluid bg-4 text-center">
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+</footer> -->
+
+  <div class="footer-dark">
+    <footer>
+      <div class="col item social">
+        <a href="https://twitter.com/AshishKumarML"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UC2E52Why2dcJiRIFuFyykRQ">
+          <i class="fa fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/ashish_martin_/"><i class="fa fa-instagram"></i></a>
+      </div>
+  </div>
+
+  </div>
+  </footer>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+      loader.style.display = "none";
+    })
+    AOS.init(
+      {
+        duration: 500
+      }
+    );
+  </script>
+</body>
+
+</html>
